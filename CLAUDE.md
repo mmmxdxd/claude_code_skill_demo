@@ -46,3 +46,4 @@ The frontend never hardcodes the specific workflow node names; it consumes whate
 - **XSS via `innerHTML`**: `uploadFile` interpolates `file.name` directly into an HTML template string (and `textContent` into log items from backend node names) with no escaping. Filenames or node names containing `<` will inject markup.
 - **No timeout/cancel/retry**: polling runs indefinitely if the backend stalls; there is no way to abort an in-flight upload.
 - **Backend missing**: any work that makes uploads actually function needs to create the backend first (FastAPI/Flask/etc.) matching the contract above.
+我也不知道改了什么
